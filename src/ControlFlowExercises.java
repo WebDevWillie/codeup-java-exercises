@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
 
     public static void main(String[] args){
@@ -32,6 +34,60 @@ public class ControlFlowExercises {
 //            System.out.println(i);
 //            i *= i;
 //        } while (i < 1000000);
+
+        for(int i=1; i <= 100; i++){
+            if(i % 3 == 0 && i % 5 == 0){
+                System.out.println("Fizz Buzz");
+            } else if (i % 5 == 0){
+                System.out.println("Buzz");
+            } else if(i % 3 == 0) {
+                System.out.println("Fizz");
+            }else {
+                System.out.println(i);
+            }
+        }
+
+//       TODO: Display a table of powers. Prompt the user to enter an integer. Display a table of squares and cubes from 1 to the value entered. Ask if the user wants to continue. Assume that the user will enter valid data. Only continue if the user agrees to.
+
+        Scanner sc = new Scanner(System.in);
+//        System.out.println("Enter an integer: ");
+//        int userInput = sc.nextInt();
+//        System.out.println("Here is your table!");
+//        System.out.println("number | squared | cubed");
+//        System.out.println("------ | ------- | -----");
+//        for(int i = 1; i <= userInput; i++){
+//            System.out.printf("%-6d | %-7d | %-5d%n", i, i * i, i * i * i);
+//        }
+
+
+        System.out.println("Enter a grade from 0 - 100: ");
+        int grade = sc.nextInt();
+        System.out.print("The grade you entered is: " + grade + " Continue? [y/N] ");
+        String userInput = sc.next();
+        boolean confirmation = userInput.equals("y");
+        if(confirmation){
+            if(grade >= 88){
+                System.out.println("Your grade is an A!");
+            } else if(grade >= 80){
+                System.out.println("Your grade is a B");
+            } else if(grade >= 67){
+                System.out.println("Your grade is a C :(");
+            } else if(grade >= 60){
+                System.out.println("Your grade is a D :(");
+            } else {
+                System.out.println("Your grade is an F :`(");
+            }
+        } else {
+            System.out.println("Goodbye");
+        }
+
+
+
+
+
+
+
+
 
     }
 
