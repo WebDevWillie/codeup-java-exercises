@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class ControlFlowExercises {
@@ -60,28 +61,44 @@ public class ControlFlowExercises {
 //        }
 
 
-        System.out.println("Enter a grade from 0 - 100: ");
-        int grade = sc.nextInt();
-        System.out.print("The grade you entered is: " + grade + " Continue? [y/N] ");
+//        System.out.println("Enter a grade from 0 - 100: ");
+//        int grade = sc.nextInt();
+//        System.out.print("The grade you entered is: " + grade + " Continue? [y/N] ");
+//        String userInput = sc.next();
+//        boolean confirmation = userInput.equals("y");
+//        if(confirmation){
+//            if(grade >= 88){
+//                System.out.println("Your grade is an A!");
+//            } else if(grade >= 80){
+//                System.out.println("Your grade is a B");
+//            } else if(grade >= 67){4
+//                System.out.println("Your grade is a C :(");
+//            } else if(grade >= 60){
+//                System.out.println("Your grade is a D :(");
+//            } else {
+//                System.out.println("Your grade is an F :`(");
+//            }
+//        } else {
+//            System.out.println("Goodbye");
+//        }
+
+        System.out.println("How are you doing today, fuck-wad?");
         String userInput = sc.next();
-        boolean confirmation = userInput.equals("y");
-        if(confirmation){
-            if(grade >= 88){
-                System.out.println("Your grade is an A!");
-            } else if(grade >= 80){
-                System.out.println("Your grade is a B");
-            } else if(grade >= 67){
-                System.out.println("Your grade is a C :(");
-            } else if(grade >= 60){
-                System.out.println("Your grade is a D :(");
+        if(userInput.equalsIgnoreCase("good") || userInput.equalsIgnoreCase("great") || userInput.equalsIgnoreCase("awesome") || userInput.equalsIgnoreCase("fantastic")){
+            System.out.println("That's great! I'm glad you're doing well....");
+        } else if(userInput.equalsIgnoreCase("bad") || userInput.equalsIgnoreCase("terrible") || userInput.equalsIgnoreCase("not good") || userInput.equalsIgnoreCase("awful")){
+            System.out.println("I'm sorry to hear that. I hope you feel better soon... could I make you feel better with a Yo Momma Joke? Continue? [y/N]");
+            String hndyInput = sc.next();
+            boolean confirmation = hndyInput.equals("y");
+            if(confirmation){
+                System.out.println("Yo momma is fat and dumb... she tears apart computers looking for the cookies.");
             } else {
-                System.out.println("Your grade is an F :`(");
+                System.out.println("Fine then! Get outa here Nerd!");
             }
+
         } else {
-            System.out.println("Goodbye");
+            System.out.println("I don't understand your response. Please try again.");
         }
-
-
 
 
 
