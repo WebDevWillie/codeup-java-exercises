@@ -18,13 +18,13 @@ public class Rectangle extends Quadrilateral {
     }
 
     @Override
-    public int setLength(int length) {
-        return 0;
+    public void setLength(int length) {
+        this.length = length;
     }
 
     @Override
-    public int setWidth(int width) {
-        return 0;
+    public void setWidth(int width) {
+        this.width = width;
     }
 }
 
